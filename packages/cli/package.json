@@ -1,0 +1,20 @@
+{
+  "name": "process_cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "bin": {
+    "client": "./src/index.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "start": "node ./src/index.js --"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bencode": "^2.0.1",
+    "yargs": "^16.0.3"
+  }
+}
