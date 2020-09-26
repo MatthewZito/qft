@@ -8,15 +8,14 @@ const bencode = require("bencode");
 
 /* Internal Modules */
 const tracker = require("./tracker.js");
+const parser = require("./parser.js");
 
 const file = process.argv[2];
-
 
 if (!file) {
     throw new Error("[-] A file argument is required.");
 }
 
-const torrent = bencode.decode(fs.readFileSync(file));
-
+const torrent = torrentParser.open(file);
 
 tracker.getPeers(torrent, peers => console.log(peers));

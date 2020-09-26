@@ -19,17 +19,17 @@ const openFile = file => {
     socket.on("message", msg => {
     console.log("message is", msg);
     });
-} 
+};
 
-exports.command = "open"
-exports.desc = "Open and read a torrent file"
+exports.command = "open";
+exports.desc = "Open and read a torrent file";
 exports.builder = {
     file: {
         describe: "Specify a torrent to read",
         demandOption: true,
         type: "string"
     },
-}
+};
 exports.handler = (argv) => {
     openFile(argv.file);
-}
+};
